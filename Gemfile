@@ -62,3 +62,4 @@ gem "rubocop-shopify", require: false
 # MemCache
 gem "dalli"
 gem "memcachier"
+gem "actionpack-action_caching"

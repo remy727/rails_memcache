@@ -1,5 +1,6 @@
 class ContactsController < ApplicationController
   before_action :set_contact, only: %i[ show edit update destroy ]
+  caches_action :show
 
   # GET /contacts or /contacts.json
   def index
@@ -37,6 +38,8 @@ class ContactsController < ApplicationController
 
   # PATCH/PUT /contacts/1 or /contacts/1.json
   def update
+    expire_action :action => :show
+
     respond_to do |format|
       if @contact.update(contact_params)
         format.html { redirect_to contact_url(@contact), notice: "Contact was successfully updated." }
@@ -50,6 +53,8 @@ class ContactsController < ApplicationController
 
   # DELETE /contacts/1 or /contacts/1.json
   def destroy
+    expire_action :action => :show
+
     @contact.destroy
 
     respond_to do |format|
