@@ -57,3 +57,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Shopify's style guide for Ruby
 gem "rubocop-shopify", require: false
+
+
+# MemCache
+gem "dalli"
+gem "memcachier"
