@@ -12,3 +12,7 @@ $ heroku addons:create memcachier:dev
 ```
 
 #### Add some functionality
+
+#### Add some caching
+
+#### Expiring the cache
