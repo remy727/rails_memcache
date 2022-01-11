@@ -16,3 +16,8 @@ $ heroku addons:create memcachier:dev
 #### Add some caching
 
 #### Expiring the cache
+
+#### Built-in Rails caching
+1. Fragment caching
+2. Action caching
+3. Session caching
