@@ -3,7 +3,8 @@ class ContactsController < ApplicationController
 
   # GET /contacts or /contacts.json
   def index
-    @contacts = Contact.all
+    @contacts = Contact.all_cached
+    @stats = Rails.cache.stats.first.last
   end
 
   # GET /contacts/1 or /contacts/1.json
