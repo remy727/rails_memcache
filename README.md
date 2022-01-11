@@ -10,3 +10,5 @@
 ```bash
 $ heroku addons:create memcachier:dev
 ```
+
+#### Add some functionality
